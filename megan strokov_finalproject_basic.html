@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Let's Rock</title>
+    <style>
+      body {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/029/143/original/Womaclimbs.png?1647152904");
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+        background-color: transparent;
+        margin: 550px 226px 50px 250px;
+      }
+
+      .tagline {
+        position: relative;
+        width: 375px;
+        height: 333px;
+        font-family: "Allerta Stencil";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 42px;
+        line-height: 54px;
+        color: #000000;
+      }
+
+      .location {
+        position: absolute;
+        font-family: "Allerta Stencil";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 77px;
+        color: #000000;
+      }
+
+      .signUp {
+        width: 283px;
+        height: 48px;
+        font-family: "Allerta Stencil";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 40px;
+        margin: 5px 0px 400px 0px;
+        padding: 3px;
+        display: block;
+        border: none;
+        border-radius: 6px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+        background-color: antiquewhite;
+        color: black;
+      }
+
+      .signUp:hover {
+        cursor: pointer;
+        background: #f2a44b;
+        color: black;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: 400px 400px 400px;
+        justify-content: left;
+        margin: 20px;
+        padding: 20px;
+        column-gap: 40px;
+      }
+
+      .column {
+        padding: 16px;
+        height: 300px;
+        margin: 3px;
+        background-color: #f2a44b;
+        text-align: left;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+      }
+
+      h2 {
+        position: relative;
+        font-family: "Allerta Stencil";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 42px;
+        line-height: 54px;
+        color: #000000;
+      }
+
+      h3 {
+        font-family: "Allerta Stencil";
+        font-style: normal;
+        font-size: 35px;
+        line-height: 54px;
+        color: #000000;
+        text-align: left;
+        margin: 20px;
+        padding: 20px;
+      }
+
+      ul {
+        columns: 2;
+        text-align: left;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 29px;
+        column-width: 200px;
+        padding: 20px;
+        margin: 20px;
+      }
+
+      .footer {
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="tagline">
+        ONE STOP FOR <br />
+        ALL THINGS THAT <br />
+        INVOLVE YOU <br />
+        ROCKING IT ON,
+        <div class="location">INDOORS!</div>
+      </div>
+      <button class="signUp">SIGN ME UP</button>
+      <br />
+      <div class="container">
+        <div class="column">
+          <div><h2>BOULDERS</h2></div>
+          <p>
+            Bouldering is rock climbing close to the ground without the need for
+            a rope or harness. It can be done indoors or out and all you need is
+            a pair climbing shoes, some chalk, and a big foam crash pad.
+            Literally climbing on a boulder instead of on a rock face or cliff.
+          </p>
+        </div>
+        <div class="column">
+          <div><h2>TOP ROPE</h2></div>
+          <p>
+            Top rope is when you climb on a rope that has an anchor already set
+            up. This is how most gym climbing is rigged — there is a rope that
+            runs from the belayer, up the wall, to an anchor, back down to the
+            climber at the base of the climb.
+          </p>
+        </div>
+        <div class="column">
+          <div><h2>LEAD ROPE</h2></div>
+          <p>
+            Lead climbing can discipline. It requires you to clip into
+            protection as you climb, to protect against a fall. You’re setting
+            the rope up as you climb. This is generally considered more
+            dangerous than top-roping because the potential for bigger falls is
+            greater since the protection is often below you instead of above
+            you.
+          </p>
+        </div>
+      </div>
+      <hr />
+      <h3>ENJOY OUR MEMBER PERKS</h3>
+      <ul>
+        <li>Discounts on Climbing generally</li>
+        <li>Connect with other Climbers</li>
+        <li>Speak Climber like a Pro</li>
+        <li>Become a Stronger Climber</li>
+        <li>Get Training to progress in Grades</li>
+        <li>Particpate in Local Competitions</li>
+      </ul>
+      <br />
+      <hr />
+      <p class="footer">
+        <em> This page was built by </em>
+        <a href="https://www.linkedin.com/in/meganstrokov/" target="_blank">
+          <strong> Megan Strokov </strong>
+        </a>
+      </p>
+    </div>
+    <script>
+      function subscribe() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        let choice = prompt("What do you want to try?");
+
+        alert(
+          "🤘 Welcome to Let's Rock! 🤘 " +
+            name +
+            ", we will help you dominate " +
+            choice +
+            "!"
+        );
+      }
+
+      let signUp = document.querySelector(".signUp");
+      signUp.addEventListener("click", subscribe);
+    </script>
+  </body>
+</html>
